@@ -61,7 +61,7 @@ public class TicTackToe {
             }
         }
  
-       // To enter the X Or O at the exact place on board.
+  
         System.out.println(
             turn + "'s turn; enter a slot number to place "
             + turn + " in:");
@@ -114,10 +114,7 @@ public class TicTackToe {
         while (winner == null) {
             int numInput;
            
-           // Exception handling.
-           // numInput will take input from user like from 1 to 9.
-           // If it is not in range from 1 to 9.
-           // then it will show you an error "Invalid input."
+         
             try {
                 numInput = in.nextInt();
                 if (!(numInput > 0 && numInput <= 9)) {
@@ -132,8 +129,7 @@ public class TicTackToe {
                 continue;
             }
              
-            // This game has two player x and O.
-            // Here is the logic to decide the turn.
+         
             if (board[numInput - 1].equals(
                     String.valueOf(numInput))) {
                 board[numInput - 1] = turn;
@@ -154,14 +150,13 @@ public class TicTackToe {
             }
         }
        
-        // If no one win or lose from both player x and O.
-        // then here is the logic to print "draw".
+      
         if (winner.equalsIgnoreCase("draw")) {
             System.out.println(
                 "It's a draw! Thanks for playing.");
         }
        
-        // For winner -to display Congratulations! message.
+    
         else {
             System.out.println(
                 "Congratulations! " + winner
